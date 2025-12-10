@@ -33,7 +33,13 @@ const useProductFilter = () => {
         const queryString = params.toString();
         console.log("QUERY STRING", queryString);
         
-        dispatch(fetchProducts(queryString));
+      //  dispatch(fetchProducts(queryString));
+      if (!queryString) {
+  dispatch(fetchProducts());
+} else {
+  dispatch(fetchProducts(queryString));
+}
+
 
     }, [dispatch, searchParams]);
 };

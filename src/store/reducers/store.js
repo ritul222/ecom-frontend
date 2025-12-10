@@ -21,7 +21,12 @@ const selectUserCheckoutAddress = localStorage.getItem("CHECKOUT_ADDRESS")
     : [];
 
 const initialState = {
-    auth: { user: user, selectUserCheckoutAddress },
+    // auth: { user: user, selectUserCheckoutAddress },
+    auth: { 
+    user: user, 
+    selectedUserCheckoutAddress: selectUserCheckoutAddress 
+},
+
     carts: { cart: cartItems },
 };
 

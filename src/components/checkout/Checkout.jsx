@@ -97,7 +97,8 @@ const Checkout = () => {
 
             {activeStep !== steps.length - 1 && (
                 <button
-                    disabled={
+                    type='button'
+                disabled={
                         errorMessage || (
                             (activeStep === 0 ? !selectedUserCheckoutAddress
                                 : activeStep === 1 ? !paymentMethod
